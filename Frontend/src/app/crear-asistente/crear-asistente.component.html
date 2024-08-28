@@ -1,0 +1,34 @@
+<div
+  style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #d3d3d3;
+  "
+>
+  <h1 style="font-size: 2rem; color: #333;">Editar evento</h1>
+</div>
+
+<form (ngSubmit)="onSubmit()" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+  <div style="display: flex; flex-direction: column; gap: 20px;">
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Nombre Asistente</mat-label>
+      <input matInput [(ngModel)]="item.nombre" name="titulo" required />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%;">
+      <mat-label>Email</mat-label>
+      <textarea matInput [(ngModel)]="item.email" name="descripcion" rows="4"></textarea>
+    </mat-form-field>
+
+
+    <div style="display: flex; justify-content: flex-end; gap: 10px;">
+      <button mat-stroked-button type="button" (click)="close()">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit">Crear</button>
+    </div>
+  </div>
+</form>
+
+
